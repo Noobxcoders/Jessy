@@ -84,14 +84,15 @@ async def start_pm(client, message: Message, _):
                 )
     else:
         out = private_panel(_)
-        served_chats = len(await add_served_chats()
-        served_users = len(await add_served_users()
+        served_chats = len(await add_served_chats())
+        served_users = len(await add_served_users())
         UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_video(
             video="https://telegra.ph/file/0764029811f3ea02dff74.mp4",
             caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM,served_users,served_chats),
             reply_markup=InlineKeyboardMarkup(out),
         )
+        return await add_served_chat(message.chat.id)
         if await is_on_off(2):
             return await app.send_message(
                 chat_id=config.LOGGER_ID,
