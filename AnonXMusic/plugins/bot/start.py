@@ -102,7 +102,7 @@ async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
     await message.reply_video(
-            video="https://telegra.ph/file/0764029811f3ea02dff74.mp4",
+        video="https://telegra.ph/file/0764029811f3ea02dff74.mp4",
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
     )
