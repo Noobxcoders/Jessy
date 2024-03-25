@@ -84,7 +84,7 @@ async def start_pm(client, message: Message, _):
                 )
     else:
         out = private_panel(_)
-        served_chats = len(await add_served_chat(chat_id))
+        served_chats = len(await add_served_chat(message.chat.id))
         served_users = len(await add_served_user())
         UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_video(
