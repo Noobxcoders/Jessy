@@ -10,6 +10,7 @@ from youtubesearchpython.__future__ import VideosSearch
 
 from AnonXMusic import app
 from config import YOUTUBE_IMG_URL
+from AnonXMusic.utils.thumbnails import gen_thumb
 
 
 def changeImageSize(maxWidth, maxHeight, image):
