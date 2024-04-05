@@ -21,6 +21,6 @@ spotipy
 tgcrypto
 unidecode
 telegraph
-yt-dlp
+git+https://github.com/yt-dlp/yt-dlp.git
 youtube-search
 youtube-search-python
